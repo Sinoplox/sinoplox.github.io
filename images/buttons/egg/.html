@@ -1,0 +1,66 @@
+<!-- AI:n LUOMA KOODI VITSIÄ VARTEN -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxi</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #box {
+            width: 25px;
+            height: 25px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img src=".\easteregg.gif" alt="">
+    </div>
+
+    <script>
+        // Select the box element
+        const box = document.getElementById('box');
+
+        // Set initial position and speed for the box
+        let posX = 100, posY = 100;
+        let speedX = 2, speedY = 2;
+
+        // Function to move the box
+        function moveBox() {
+            // Update the position of the box
+            posX += speedX;
+            posY += speedY;
+
+            // Get the width and height of the viewport
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+
+            // Check for collision with the boundaries of the window (bounce effect)
+            if (posX + box.offsetWidth > viewportWidth || posX < 0) {
+                speedX = -speedX;  // Reverse the horizontal direction
+            }
+            if (posY + box.offsetHeight > viewportHeight || posY < 0) {
+                speedY = -speedY;  // Reverse the vertical direction
+            }
+
+            // Apply the new position to the box
+            box.style.left = posX + 'px';
+            box.style.top = posY + 'px';
+
+            // Call the moveBox function on the next frame (creates the animation)
+            requestAnimationFrame(moveBox);
+        }
+
+        // Start the box movement
+        moveBox();
+    </script>
+</body>
+</html>
