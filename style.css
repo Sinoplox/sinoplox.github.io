@@ -1,0 +1,24 @@
+.my-photo {
+  border-radius: 50%;
+  width: auto;
+  max-width: 200px;
+  max-height: 200px;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+.round-button {
+  margin-top: 20px;
+  border-radius: 50%;
+  max-width: 25vw;
+  max-height: 300px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  margin-top: 10px;
+}
+
+.card {
+  margin-top: 20px;
+}
