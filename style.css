@@ -40,3 +40,10 @@
   font-size: xx-large;
  }
 
+body {
+  height: 100vh;
+  background-image: linear-gradient(gray, white);
+  background-repeat: no-repeat;
+  width: auto;
+  background-size: cover;
+}
