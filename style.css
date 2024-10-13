@@ -42,7 +42,7 @@
 
 body {
   height: 100vh;
-  background-image: linear-gradient(gray, white);
+  background-image: linear-gradient(rgb(167, 163, 163), white);
   background-repeat: no-repeat;
   width: auto;
   background-size: cover;
